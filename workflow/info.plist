@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alexchiri.alfred2-format-sql-ruby</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>A7E376B3-F572-44A1-95CB-D51581241464</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7C1AF34F-6B6C-4C9D-9976-DE7B7CD226F7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Alexandru Chiritescu</string>
+	<key>description</key>
+	<string>Formats the SQL copied to clipboard</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Format SQL</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>formatsql</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Formatting your SQL script...</string>
+				<key>script</key>
+				<string>LANG=en_US.UTF-8 /usr/bin/ruby ./main.rb {query} 2&gt; error.log</string>
+				<key>subtext</key>
+				<string>If you copied a SQL script to clipboard, it will be formatted</string>
+				<key>title</key>
+				<string>Format SQL</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A7E376B3-F572-44A1-95CB-D51581241464</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7C1AF34F-6B6C-4C9D-9976-DE7B7CD226F7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>7C1AF34F-6B6C-4C9D-9976-DE7B7CD226F7</key>
+		<dict>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>A7E376B3-F572-44A1-95CB-D51581241464</key>
+		<dict>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://github.com/zhaocai/alfred2-ruby-template</string>
+</dict>
+</plist>
