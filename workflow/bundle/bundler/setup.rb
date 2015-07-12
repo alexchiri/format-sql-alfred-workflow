@@ -3,6 +3,10 @@ require 'rbconfig'
 ruby_engine = defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'
 ruby_version = RbConfig::CONFIG["ruby_version"]
 path = File.expand_path('..', __FILE__)
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/builder-3.2.2/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/gyoku-1.3.1/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nori-2.6.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/plist-3.1.0/lib"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/alfred-workflow-1.8.0/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/terminal-notifier-1.6.3/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/alfred-workflow-2.0.5/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/clipboard-1.0.6/lib"
