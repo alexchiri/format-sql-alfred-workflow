@@ -16,7 +16,7 @@ Alfred.with_friendly_error do |alfred|
   fb = alfred.feedback
 
   sql_script = Clipboard.paste
-  if sql_script.blank?
+  if sql_script.nil? || sql_script.empty?
     raise_error alfred, 'Copy to clipboard an SQL query first!'
   end
 
@@ -40,7 +40,7 @@ Alfred.with_friendly_error do |alfred|
     else
       formatted_sql_script = JSON.parse(response.body)['result']
 
-      if formatted_sql_script.blank?
+      if formatted_sql_script.nil? || formatted_sql_script.empty?
         raise_error alfred, 'For some reason, the resulting query is empty. Try again? :-/'
       end
 
