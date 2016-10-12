@@ -20,7 +20,7 @@ Alfred.with_friendly_error do |alfred|
     raise_error alfred, 'Copy to clipboard an SQL query first!'
   end
 
-  url= URI("http://sqlformat.org/api/v1/format")
+  url= URI("https://sqlformat.org/api/v1/format")
   params = {
       :sql => sql_script,
       :reindent => 1,

@@ -35,3 +35,6 @@ build/
 .rvmrc
 .idea
 workflow/error.log
+.DS_Store
+workflow/.DS_Store
+workflow/bundle/.DS_Store
