@@ -46,8 +46,8 @@ Alfred.with_friendly_error do |alfred|
 
       fb.add_item({
                       :uid => '',
-                      :title => 'Copy formatted SQL script to clipboard',
-                      :subtitle => 'and insert it in the currently active window',
+                      :title => 'Copy formatted SQL script to clipboard and insert it in the currently active window',
+                      :subtitle => 'Hold cmd to only copy to clipboard',
                       :arg => formatted_sql_script,
                       :valid => 'yes',
                   })
